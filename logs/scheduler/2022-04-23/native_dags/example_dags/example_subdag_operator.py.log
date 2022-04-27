@@ -1,0 +1,1 @@
+[2022-04-23 21:21:14,102] {processor.py:163} INFO - Started process (PID=159) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_subdag_operator.py

@@ -1,0 +1,63 @@
+[2022-04-25 02:11:26,768] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: upload_to_drive.create_file manual__2022-04-25T02:11:21.872488+00:00 [queued]>
+[2022-04-25 02:11:28,079] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: upload_to_drive.create_file manual__2022-04-25T02:11:21.872488+00:00 [queued]>
+[2022-04-25 02:11:28,084] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 02:11:28,088] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-04-25 02:11:28,094] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 02:11:29,979] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): create_file> on 2022-04-25 02:11:21.872488+00:00
+[2022-04-25 02:11:30,019] {standard_task_runner.py:52} INFO - Started process 9613 to run task
+[2022-04-25 02:11:30,058] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'upload_to_drive', 'create_file', 'manual__2022-04-25T02:11:21.872488+00:00', '--job-id', '74', '--raw', '--subdir', 'DAGS_FOLDER/upload_to_drive_dag.py', '--cfg-path', '/tmp/tmph8ga2hyq', '--error-file', '/tmp/tmpz50918ge']
+[2022-04-25 02:11:30,075] {standard_task_runner.py:77} INFO - Job 74: Subtask create_file
+[2022-04-25 02:11:30,323] {logging_mixin.py:109} INFO - Running <TaskInstance: upload_to_drive.create_file manual__2022-04-25T02:11:21.872488+00:00 [running]> on host e37e04a9d1d5
+[2022-04-25 02:11:30,576] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=upload_to_drive
+AIRFLOW_CTX_TASK_ID=create_file
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-25T02:11:21.872488+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-25T02:11:21.872488+00:00
+[2022-04-25 02:11:30,582] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-04-25 02:11:30,590] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'echo file created on 2022-04-25. > ${AIRFLOW_HOME}/tmp/my_file_2022-04-25.txt']
+[2022-04-25 02:11:30,669] {subprocess.py:85} INFO - Output:
+[2022-04-25 02:11:30,725] {subprocess.py:89} INFO - bash: /opt/***/tmp/my_file_2022-04-25.txt: No such file or directory
+[2022-04-25 02:11:30,733] {subprocess.py:93} INFO - Command exited with return code 1
+[2022-04-25 02:11:30,787] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 188, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-04-25 02:11:30,803] {taskinstance.py:1282} INFO - Marking task as FAILED. dag_id=upload_to_drive, task_id=create_file, execution_date=20220425T021121, start_date=20220425T021128, end_date=20220425T021130
+[2022-04-25 02:11:30,843] {standard_task_runner.py:92} ERROR - Failed to execute job 74 for task create_file
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 188, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-04-25 02:11:30,885] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-25 02:11:30,972] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

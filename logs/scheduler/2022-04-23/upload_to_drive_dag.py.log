@@ -1,0 +1,14 @@
+[2022-04-23 21:18:21,483] {processor.py:163} INFO - Started process (PID=72) to work on /opt/airflow/dags/upload_to_drive_dag.py
+[2022-04-23 21:18:21,538] {processor.py:642} INFO - Processing file /opt/airflow/dags/upload_to_drive_dag.py for tasks to queue
+[2022-04-23 21:18:21,541] {logging_mixin.py:109} INFO - [2022-04-23 21:18:21,541] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/upload_to_drive_dag.py
+[2022-04-23 21:18:25,248] {processor.py:654} INFO - DAG(s) dict_keys(['upload_to_drive']) retrieved from /opt/airflow/dags/upload_to_drive_dag.py
+[2022-04-23 21:18:25,364] {logging_mixin.py:109} INFO - [2022-04-23 21:18:25,363] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-23 21:18:25,508] {logging_mixin.py:109} INFO - [2022-04-23 21:18:25,508] {dag.py:2937} INFO - Setting next_dagrun for upload_to_drive to 2022-04-22T00:00:00+00:00
+[2022-04-23 21:18:25,636] {processor.py:171} INFO - Processing /opt/airflow/dags/upload_to_drive_dag.py took 4.193 seconds
+[2022-04-23 21:20:40,941] {processor.py:163} INFO - Started process (PID=123) to work on /opt/airflow/dags/upload_to_drive_dag.py
+[2022-04-23 21:20:41,310] {processor.py:642} INFO - Processing file /opt/airflow/dags/upload_to_drive_dag.py for tasks to queue
+[2022-04-23 21:20:41,322] {logging_mixin.py:109} INFO - [2022-04-23 21:20:41,322] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/upload_to_drive_dag.py
+[2022-04-23 21:20:45,145] {processor.py:654} INFO - DAG(s) dict_keys(['upload_to_drive']) retrieved from /opt/airflow/dags/upload_to_drive_dag.py
+[2022-04-23 21:20:45,230] {logging_mixin.py:109} INFO - [2022-04-23 21:20:45,230] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-23 21:20:46,470] {logging_mixin.py:109} INFO - [2022-04-23 21:20:46,470] {dag.py:2937} INFO - Setting next_dagrun for upload_to_drive to 2022-04-23T00:00:00+00:00
+[2022-04-23 21:20:47,969] {processor.py:171} INFO - Processing /opt/airflow/dags/upload_to_drive_dag.py took 7.041 seconds
